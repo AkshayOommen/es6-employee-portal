@@ -6,7 +6,7 @@
 </head>
 <body>
 	<section class="formData">
-		<form name="employeeInfo">
+		<form id="employeeInfo">
 			<section class="formFields">
 				<div class="formField">
 					<label for="name">Name</label>
@@ -25,10 +25,10 @@
 					<input type="text" name="manager" placeholder="Enter manager">
 				</div>
 			</section>
-			<section class="formControls">
-				<input type="button" value="Add details" onclick="addEmployeeDetails()">
-			</section>
 		</form>
+		<section class="formControls">
+			<input type="button" value="Add details" onclick="addEmployeeDetails()">
+		</section>
 	</section>
 	<section class="tabularData">
 		<table>
@@ -40,7 +40,7 @@
 					<th>Manager</th>
 				</tr>
 			</thead>
-			<tbody>
+			<tbody id="employeeTable">
 			</tbody>
 		</table>
 	</section>

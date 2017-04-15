@@ -28,3 +28,7 @@ table {
 	margin: 10px;
 	width: 100%;
 }
+
+table td {
+	text-align: center;
+}
