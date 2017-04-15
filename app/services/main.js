@@ -1,7 +1,7 @@
 'use strict'
 
-import {Manager} from "./Manager";
-import {SoftwareEngineer} from "./SoftwareEngineer";
+import {Manager} from "../classes/Manager";
+import {SoftwareEngineer} from "../classes/SoftwareEngineer";
 
 let MainModule = {
 	settings: {

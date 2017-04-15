@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 					]
 				},
 				files: {
-					"./app/main.bundle.js": ["./app/main.js"]
+					"./app/main.bundle.js": ["./app/**/*.js"]
 				}
 			}
 		},
