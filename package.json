@@ -1,7 +1,7 @@
 {
-  "name": "es6-pastry-store",
+  "name": "es6-employee-portal",
   "version": "1.0.0",
-  "description": "A pastry store, what more do you want to know?",
+  "description": "An employee portal, what more do you want to know?",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
