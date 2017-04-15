@@ -4,12 +4,12 @@ div.formField {
 
 div.formField input {
 	float: right;
-	width: 200px;
+	width: 300px;
 }
 
 form {
-	padding: 20px;
 	background-color: #eef0ef;
+	padding: 20px;
 }
 
 section.formControls input{
@@ -17,18 +17,22 @@ section.formControls input{
 	margin: auto;	
 }
 
-section.tabularData, section.formFields, section.formControls {
+div.employeeType, table td {
+	text-align: center;
+}
+
+div.employeeType, section.tabularData, section.formFields, section.formControls {
 	display: block;
 	margin: auto;
 	width: 500px;
+}
+
+.hide {
+	display: none;
 }
 
 table {
 	border: 1px solid #000000;
 	margin: 10px;
 	width: 100%;
-}
-
-table td {
-	text-align: center;
 }

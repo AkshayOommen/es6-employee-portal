@@ -1,6 +1,7 @@
 'use strict'
 
-import {Employee} from "./Employee";
+import {Manager} from "./Manager";
+import {SoftwareEngineer} from "./SoftwareEngineer";
 
 let MainModule = {
 	settings: {
@@ -10,6 +11,7 @@ let MainModule = {
 		Object.assign(window, {
 			addEmployeeDetails: this.addEmployeeDetails,
 			appendToTable: this.appendToTable,
+			modifyAvailableFields: this.modifyAvailableFields,
 			that: this
 		});
 	},
@@ -18,33 +20,41 @@ let MainModule = {
 	}, 
 	addEmployeeDetails: function() {
 		let employee,
-			params = [];
+			params = [],
+			classToAdd = document.getElementById('isManager').checked ? 'managerField' : 'engineerField';
 
-		for (let i = 0; i < document.getElementById('employeeInfo').elements.length; i++) {
-			params.push(document.getElementById('employeeInfo').elements[i].value);
+		for (let i = 0; i < document.getElementById('employeeInfo').length; i++) {
+			if (document.getElementById('employeeInfo').elements[i].parentElement.className.indexOf(classToAdd) !== -1) {
+				params.push(document.getElementById('employeeInfo').elements[i].value);
+			}
 		};
 
-		employee = new Employee(...params);
+		employee = classToAdd === 'engineerField' ? new SoftwareEngineer(...params) : new Manager(...params);
 		employee.showDetails();
-
 		that.appendToTable(employee);
 	},
 	appendToTable: function(employee) {
-		let table = document.getElementById('employeeTable'),
-			row,
-			cell1, cell2, cell3, cell4;
+		let table = document.getElementById('isManager').checked ? document.getElementById('managerTable') : document.getElementById('engineerTable'),
+			classToAdd = document.getElementById('isManager').checked ? 'managerField' : 'engineerField',
+			row;
 
 		row = table.insertRow(-1);
 
-		cell1 = row.insertCell(0);
-		cell2 = row.insertCell(1);
-		cell3 = row.insertCell(2);
-		cell4 = row.insertCell(3);
+		for (let i = 0; i < document.getElementsByClassName(classToAdd).length; i++) {
+			let cell =  row.insertCell(i);
+			cell.innerHTML = employee[Object.keys(employee)[i]];
+		}
+	},
+	modifyAvailableFields: function() {
+		let classToHide = document.getElementById('isManager').checked ? 'engineerField' : 'managerField',
+			classToShow = document.getElementById('isManager').checked ? 'managerField' : 'engineerField';
 
-		cell1.innerHTML = employee.name;
-		cell2.innerHTML = employee.age;
-		cell3.innerHTML = employee.project;
-		cell4.innerHTML = employee.manager;
+		for (let i = 0; i < document.getElementsByClassName(classToHide).length; i++) {
+			document.getElementsByClassName(classToHide)[i].className += ' hide';
+		};
+		for (let i = 0; i < document.getElementsByClassName(classToShow).length; i++) {
+			document.getElementsByClassName(classToShow)[i].className = document.getElementsByClassName(classToShow)[i].className.replace(' hide', '');
+		};
 	}
 };
 

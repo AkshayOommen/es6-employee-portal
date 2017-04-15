@@ -1,7 +1,7 @@
 class Employee {
-	constructor (name, age, project, manager) {
+	constructor (name, birthDate, project, manager) {
 		this._name = name;
-		this._age = age;
+		this._birthDate = birthDate;
 		this._project = project;
 		this._manager = manager;
 	}
@@ -14,12 +14,12 @@ class Employee {
 		return this._name;
 	}
 
-	set age (age) {
-		this._age = age;
+	set birthDate (birthDate) {
+		this._birthDate = birthDate;
 	}
 
-	get age () {
-		return this._age;
+	get birthDate () {
+		return this._birthDate;
 	}
 
 	set project (project) {

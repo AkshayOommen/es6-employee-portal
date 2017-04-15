@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "An employee portal, what more do you want to know?",
   "main": "index.js",
+  "repository" : { 
+    "type" : "git", 
+    "url" : "https://github.com/AkshayOommen/es6-employee-portal.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "concurrently \"grunt\" \"lite-server\""
