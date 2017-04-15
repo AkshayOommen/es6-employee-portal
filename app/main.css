@@ -1,0 +1,30 @@
+div.formField {
+	margin: 10px;
+}
+
+div.formField input {
+	float: right;
+	width: 200px;
+}
+
+form {
+	padding: 20px;
+	background-color: #eef0ef;
+}
+
+section.formControls input{
+	display: block;
+	margin: auto;	
+}
+
+section.tabularData, section.formFields, section.formControls {
+	display: block;
+	margin: auto;
+	width: 500px;
+}
+
+table {
+	border: 1px solid #000000;
+	margin: 10px;
+	width: 100%;
+}

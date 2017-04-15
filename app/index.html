@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ES6 Pastry Store</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<section class="formData">
+		<form name="employeeInfo">
+			<section class="formFields">
+				<div class="formField">
+					<label for="name">Name</label>
+					<input type="text" name="name" placeholder="Enter employee name">
+				</div>
+				<div class="formField">
+					<label for="name">Age</label>
+					<input type="number" name="age" placeholder="Enter age">
+				</div>
+				<div class="formField">
+					<label for="name">Project</label>
+					<input type="text" name="project" placeholder="Enter project">
+				</div>
+				<div class="formField">
+					<label for="name">Manager</label>
+					<input type="text" name="manager" placeholder="Enter manager">
+				</div>
+			</section>
+			<section class="formControls">
+				<input type="button" value="Add details" onclick="addEmployeeDetails()">
+			</section>
+		</form>
+	</section>
+	<section class="tabularData">
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Age</th>
+					<th>Project</th>
+					<th>Manager</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</section>
+</body>
+<script src="main.bundle.js"></script>
+</html>

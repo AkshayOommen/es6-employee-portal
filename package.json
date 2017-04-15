@@ -1,0 +1,21 @@
+{
+  "name": "es6-pastry-store",
+  "version": "1.0.0",
+  "description": "A pastry store, what more do you want to know?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"grunt\" \"lite-server\""
+  },
+  "author": "Akshay Abraham",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^7.3.0",
+    "concurrently": "^3.4.0",
+    "grunt": "^1.0.1",
+    "grunt-browserify": "^5.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "lite-server": "^2.3.0"
+  }
+}
