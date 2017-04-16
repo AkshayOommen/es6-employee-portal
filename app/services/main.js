@@ -1,5 +1,8 @@
 'use strict'
 
+/*ESLint confugrations*/
+/*global document window that*/
+
 import {Manager} from "../classes/Manager";
 import {SoftwareEngineer} from "../classes/SoftwareEngineer";
 
@@ -27,7 +30,7 @@ let MainModule = {
 			if (document.getElementById('employeeInfo').elements[i].parentElement.className.indexOf(classToAdd) !== -1) {
 				params.push(document.getElementById('employeeInfo').elements[i].value);
 			}
-		};
+		}
 
 		employee = classToAdd === 'engineerField' ? new SoftwareEngineer(...params) : new Manager(...params);
 		employee.showDetails();
@@ -42,7 +45,7 @@ let MainModule = {
 
 		for (let i = 0; i < document.getElementsByClassName(classToAdd).length; i++) {
 			let cell =  row.insertCell(i);
-			cell.innerHTML = employee[Object.keys(employee)[i]];
+			cell.innerHTML = employee[Object.keys(employee)[i]]; 
 		}
 	},
 	modifyAvailableFields: function() {
@@ -51,10 +54,11 @@ let MainModule = {
 
 		for (let i = 0; i < document.getElementsByClassName(classToHide).length; i++) {
 			document.getElementsByClassName(classToHide)[i].className += ' hide';
-		};
+		}
+
 		for (let i = 0; i < document.getElementsByClassName(classToShow).length; i++) {
 			document.getElementsByClassName(classToShow)[i].className = document.getElementsByClassName(classToShow)[i].className.replace(' hide', '');
-		};
+		}
 	}
 };
 

@@ -3,7 +3,9 @@ A sample project which makes use of the latest ECMAScript6 features, with babeli
 
 #Steps to setup
 
-1. Clone the repository onto your local system.
-2. Using command prompt or terminal, switch your current working directory to 'es6-employee-portal' and run 'npm install' to install all the required plugins.
-3. Once the installation is complete, run 'npm start'
-4. Welcome to the world of ECMAScript6.
+1. Clone the repository onto your local system. (https://github.com/AkshayOommen/es6-employee-portal.git)
+2. Ensure you have the latest versions of node.js and npm installed on your system before proceeding to the next step.
+3. Using command prompt or terminal, switch your current working directory to 'es6-employee-portal' and run 'npm install' to install all the required plugins present in the 'package.json'.
+4. Install ESLint globally using 'npm install eslint -g'.
+5. Once the installation is complete, run 'npm start'.
+6. Welcome to the world of ECMAScript6.

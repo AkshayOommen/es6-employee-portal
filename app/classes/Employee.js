@@ -1,4 +1,6 @@
-class Employee {
+/*global alert*/
+
+export class Employee {
 	constructor (name, birthDate, project, manager) {
 		this._name = name;
 		this._birthDate = birthDate;
@@ -37,10 +39,8 @@ class Employee {
 	get manager () {
 		return this._manager;
 	}
- 	
+ 
 	showDetails () {
 		alert(`${this._name} works under ${this._manager}`); 
 	}
 }
-
-export {Employee};

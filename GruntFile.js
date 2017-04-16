@@ -3,26 +3,34 @@ module.exports = function(grunt) {
 		browserify: {
 			dist: {
 				options: {
+					browserifyOptions: {
+						debug: true
+					},
 					transform: [
-						["babelify"]
+						["babelify", {presets: "es2015"}]
 					]
 				},
 				files: {
-					"./app/main.bundle.js": ["./app/**/*.js"]
+					"./app/main.bundle.js": ["./app/grunt-contrib-watchlasses/*.js", "./app/services/*.js"]
 				}
 			}
 		},
+		eslint: {
+			target: ["./app/classes/*.js", "./app/services/*.js"]
+		},
 		watch: {
 			scripts: {
-				files: ["./app/*.js"],
-				tasks: ["browserify"]
+				files: ["./app/grunt-contrib-watchlasses/*.js", "./app/services/*.js"],
+				tasks: ["eslint", "browserify"]
 			}
 		}
 	});
 
 	grunt.loadNpmTasks('grunt-browserify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-eslint');
 
 	grunt.registerTask("default", ["browserify", "watch"]);
 	grunt.registerTask("build", ["browserify"]);
+	grunt.registerTask("lint", ["eslint"]);
 };

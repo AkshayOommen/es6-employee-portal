@@ -1,6 +1,6 @@
 import {Employee} from "./Employee.js";
 
-class SoftwareEngineer extends Employee {
+export class SoftwareEngineer extends Employee {
 	constructor(name, birthDate, project, manager, skillSet, rating) {
 		super(name, birthDate, project, manager);
 		this._skillSet = skillSet;
@@ -23,5 +23,3 @@ class SoftwareEngineer extends Employee {
 		return this._rating;
 	}
 }
-
-export {SoftwareEngineer};
