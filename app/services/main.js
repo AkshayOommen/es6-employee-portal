@@ -1,7 +1,7 @@
 'use strict'
 
 /*ESLint confugrations*/
-/*global document window that*/
+/*global document window that alert*/
 
 import {C} from '../constants/Constants'
 import {Manager} from '../classes/Manager';
@@ -13,15 +13,17 @@ let MainModule = {
         //TODO
     },
     bind: function() {
-        // Assign constants to global scope
+        // Assign values to global variables
         this.const = C();
+        this.employeeList = [];
 
         // Assign methods to global scope
         Object.assign(window, {
             addEmployeeDetails: this.addEmployeeDetails,
             appendToTable: this.appendToTable,
             modifyAvailableFields: this.modifyAvailableFields,
-            that: this
+            returnFilteredData: this.returnFilteredData,
+            that: this,
         });
     },
     init: function(){
@@ -49,7 +51,10 @@ let MainModule = {
             params = document.getElementById(that.const.IS_MANAGER).checked ? that.const.MANAGER_PARAMS : that.const.ENGINEER_PARAMS,
             row;
 
-        if (table.getElementsByTagName('tr')[0].getElementsByTagName('td')[0].className === 'noRecords') {
+        // Add employee information to the global list    
+        that.employeeList.push(employee);
+
+        if (table.getElementsByTagName('tr')[0].getElementsByTagName('td')[0].className === that.const.NO_RECORDS) {
             table.getElementsByTagName('tr')[0].remove();
         }
 
@@ -89,6 +94,21 @@ let MainModule = {
         }
 
         document.getElementById(that.const.EMPLOYEE_INFO).reset();
+    },
+    returnFilteredData: function() {
+        let filteredNames = [],
+            filter = document.getElementById('filter').value,
+            searchText = document.getElementById('searchText').value;
+
+        that.employeeList.forEach((employee) => {
+            if (employee.name[filter](searchText) && searchText.length !== 0) {
+                filteredNames.push(employee.name);
+            }
+        })
+
+        alert(filteredNames.length > 0 ? `The filtered names are ${filteredNames}` : that.const.NO_RECORDS_FOUND);
+        
+
     }
 };
 

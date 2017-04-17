@@ -36,6 +36,10 @@ header {
     text-align: center;
 }
 
+.padTop {
+    padding-top:15px;
+}
+
 section.formControls input{
     display: block;
     margin: auto;

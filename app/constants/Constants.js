@@ -1,7 +1,3 @@
-/**
-*
-*/
-
 export function C() {
     return {
         EMPLOYEE_INFO: 'employeeInfo',

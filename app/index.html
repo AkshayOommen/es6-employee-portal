@@ -42,9 +42,27 @@
                 </div>
             </section>
         </form>
-        <section class="formControls">
+        <section class="formControls padTop">
             <input type="button" value="Add details" onclick="addEmployeeDetails()"/>
         </section>
+    </section>
+    <section class="formControls">
+        <div class="employeeType padTop">
+            <label for="name">Search Type</label>
+            <input id="filter" type="text" list="searchTypes"/>
+            <datalist id="searchTypes">
+                <option value="startsWith">
+                <option value="endsWith">
+                <option value="includes">
+            </datalist>
+        </div>
+        <div class="employeeType padTop">
+            <label for="name">Search Text</label>
+            <input id="searchText" type="text"/>
+        </div>   
+        <section class="formControls padTop">
+            <input type="button" value="Search" onclick="returnFilteredData()"/>
+        </section>        
     </section>
     <section class="tabularData">
         <header>Engineer information</header>
