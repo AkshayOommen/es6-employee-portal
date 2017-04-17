@@ -1,38 +1,38 @@
 div.formField {
-	margin: 10px;
+    margin: 10px;
 }
 
 div.formField input {
-	float: right;
-	width: 300px;
+    float: right;
+    width: 300px;
 }
 
 form {
-	background-color: #eef0ef;
-	padding: 20px;
+    background-color: #eef0ef;
+    padding: 20px;
 }
 
 section.formControls input{
-	display: block;
-	margin: auto;	
+    display: block;
+    margin: auto;
 }
 
 div.employeeType, table td {
-	text-align: center;
+    text-align: center;
 }
 
 div.employeeType, section.tabularData, section.formFields, section.formControls {
-	display: block;
-	margin: auto;
-	width: 500px;
+    display: block;
+    margin: auto;
+    width: 500px;
 }
 
 .hide {
-	display: none;
+    display: none;
 }
 
 table {
-	border: 1px solid #000000;
-	margin: 10px;
-	width: 100%;
+    border: 1px solid #000000;
+    margin: 10px;
+    width: 100%;
 }
