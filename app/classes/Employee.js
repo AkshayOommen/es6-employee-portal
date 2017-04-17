@@ -2,10 +2,10 @@
 
 export class Employee {
     constructor (name, birthDate, project, manager) {
-        this._name = name;
-        this._birthDate = birthDate;
-        this._project = project;
-        this._manager = manager;
+        this._name = name || 'John Doe';
+        this._birthDate = birthDate || '01/01/1970';
+        this._project = project || 'Buffer';
+        this._manager = manager || 'Mayank';
     }
 
     set name (name) {
@@ -38,6 +38,16 @@ export class Employee {
 
     get manager () {
         return this._manager;
+    }
+
+    get age () {
+        return this.calculateAge();
+    }
+
+    calculateAge() { 
+        var ageDifMs = Date.now() - new Date(this._birthDate).getTime();
+        var ageDate = new Date(ageDifMs);
+        return Math.abs(ageDate.getUTCFullYear() - 1970);
     }
 
     showDetails () {

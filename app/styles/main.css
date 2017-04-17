@@ -1,3 +1,13 @@
+div.employeeType, table td {
+    text-align: center;
+}
+
+div.employeeType, section.tabularData, section.formFields, section.formControls {
+    display: block;
+    margin: auto;
+    width: 500px;
+}
+
 div.formField {
     margin: 10px;
 }
@@ -12,27 +22,31 @@ form {
     padding: 20px;
 }
 
-section.formControls input{
-    display: block;
-    margin: auto;
-}
-
-div.employeeType, table td {
+header {
+    font-size: 24px;
+    padding: 50px 5px 5px;
     text-align: center;
-}
-
-div.employeeType, section.tabularData, section.formFields, section.formControls {
-    display: block;
-    margin: auto;
-    width: 500px;
 }
 
 .hide {
     display: none;
 }
 
+.noRecords {
+    text-align: center;
+}
+
+section.formControls input{
+    display: block;
+    margin: auto;
+}
+
 table {
     border: 1px solid #000000;
     margin: 10px;
     width: 100%;
+}
+
+table tr td{
+    padding: 15px;
 }
