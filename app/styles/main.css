@@ -40,6 +40,23 @@ header {
     padding-top:15px;
 }
 
+#ratingLabel {
+    text-align: center;
+    font-weight: bold;
+}
+
+#ratingLabel.youSuck, #ratingLabel.didNotMeet {
+    color: red;
+}
+
+#ratingLabel.met {
+    color: orange;
+}
+
+#ratingLabel.commendable, #ratingLabel.thomasPanicker {
+    color: green;
+}
+
 section.formControls input{
     display: block;
     margin: auto;

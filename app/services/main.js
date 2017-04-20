@@ -21,6 +21,7 @@ let MainModule = {
         Object.assign(window, {
             addEmployeeDetails: this.addEmployeeDetails,
             appendToTable: this.appendToTable,
+            changeRatingLabel: this.changeRatingLabel,
             modifyAvailableFields: this.modifyAvailableFields,
             returnFilteredData: this.returnFilteredData,
             that: this,
@@ -65,6 +66,17 @@ let MainModule = {
             cell.innerHTML = employee[params[i]];
         }
     },
+    changeRatingLabel: function () {
+        let rating = parseInt(document.getElementById('rating').value, 10);
+
+        for(let ratingName in that.const.RATINGS) {
+            if (that.const.RATINGS[ratingName] === rating) {
+                document.getElementById('ratingLabel').innerHTML = ratingName;
+                document.getElementById('ratingLabel').className = '';
+                document.getElementById('ratingLabel').className = ratingName;
+            }
+        }
+    },
     checkForData: function(tableName) {
         let table = document.getElementById(tableName),
             isDataAvailable = document.getElementById(tableName).length > 0 ? true : false,
@@ -107,8 +119,6 @@ let MainModule = {
         })
 
         alert(filteredNames.length > 0 ? `The filtered names are ${filteredNames}` : that.const.NO_RECORDS_FOUND);
-        
-
     }
 };
 

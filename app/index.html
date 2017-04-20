@@ -34,7 +34,8 @@
                 </div>
                 <div class="formField engineerField">
                     <label for="rating">Rating</label>
-                    <input type="range" name="rating" min="1" max="5" step="1" value="3"/>
+                    <input id="rating" type="range" name="rating" min="1" max="5" step="1" value="3" onchange="changeRatingLabel()"/>
+                    <p id="ratingLabel" class="met">Met Expectation</p>
                 </div>
                 <div class="formField managerField hide">
                     <label for="allocatedEmployees">Allocated Employees</label>

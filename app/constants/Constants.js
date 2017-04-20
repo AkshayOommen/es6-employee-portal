@@ -12,6 +12,13 @@ export function C() {
         MANAGER_TABLE: 'managerTable',
         MANAGER_TABLE_HEADERS: 'managerTableHeaders',
         NO_RECORDS: 'noRecords',
-        NO_RECORDS_FOUND: 'No records found'
+        NO_RECORDS_FOUND: 'No records found',
+        RATINGS: {
+            'youSuck': 1,
+            'didNotMeet': 2,
+            'met': 3,
+            'commendable': 4,
+            'thomasPanicker': 5
+        }
     }
 }
