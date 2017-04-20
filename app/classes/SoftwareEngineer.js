@@ -1,6 +1,8 @@
-import {Employee} from "./Employee.js";
+import {Activities} from "./Activities";
+import {Employee} from "./Employee";
+import {aggregation} from "../utils/Aggregator"
 
-export class SoftwareEngineer extends Employee {
+export class SoftwareEngineer extends aggregation(Employee, Activities) {
     constructor(name, birthDate, project, manager, skillSet, rating) {
         super(name, birthDate, project, manager);
         this._skillSet = skillSet || 'None';

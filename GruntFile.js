@@ -11,16 +11,16 @@ module.exports = function(grunt) {
 					]
 				},
 				files: {
-					"./app/main.bundle.js": ["./app/classes/*.js", "./app/constants/*.js", "./app/services/*.js"]
+					"./app/main.bundle.js": ["./app/classes/*.js", "./app/constants/*.js", "./app/services/*.js", "./app/utils/*.js"]
 				}
 			}
 		},
 		eslint: {
-			target: ["./app/classes/*.js", "./app/constants/*.js", "./app/services/*.js"]
+			target: ["./app/classes/*.js", "./app/constants/*.js", "./app/services/*.js", "./app/utils/*.js"]
 		},
 		watch: {
 			scripts: {
-				files: ["./app/classes/*.js", "./app/constants/*.js", "./app/services/*.js", "./app/styles/*.css"],
+				files: ["./app/classes/*.js", "./app/constants/*.js", "./app/services/*.js", "./app/utils/*.js", "./app/styles/*.css"],
 				tasks: ["eslint", "browserify"]
 			}
 		}

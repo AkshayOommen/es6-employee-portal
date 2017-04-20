@@ -1,6 +1,8 @@
-import {Employee} from "./Employee.js";
+import {Activities} from "./Activities";
+import {Employee} from "./Employee";
+import {aggregation} from "../utils/Aggregator"
 
-export class Manager extends Employee {
+export class Manager extends aggregation(Employee, Activities) {
     constructor(name, birthDate, project, manager, allocatedEmployees) {
         super(name, birthDate, project, manager);
         this._allocatedEmployees = allocatedEmployees || '';
