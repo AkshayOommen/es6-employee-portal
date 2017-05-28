@@ -2,5 +2,5 @@
 	"port": 8000,
 	"files": ["./app/*.{html,css,js}"],
 	"server": {"baseDir": "./app"},
-    "browser": "google chrome"
+    "browser": "chrome"
 }

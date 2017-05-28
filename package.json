@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"grunt\" \"lite-server\""
+    "start": "concurrently \"grunt\" \"lite-server\" \"nodemon index.js\""
   },
   "author": "Akshay Abraham",
   "license": "ISC",
@@ -22,10 +22,15 @@
     "grunt-browserify": "^5.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-eslint": "^19.0.0",
-    "lite-server": "^2.3.0"
+    "lite-server": "^2.3.0",
+    "nodemon": "^1.11.0"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
     "parser": "babel-eslint"
+  },
+  "dependencies": {
+    "express": "^4.15.3",
+    "mongodb": "^2.2.27"
   }
 }

@@ -1,11 +1,12 @@
 /*global alert*/
 
 export class Employee {
-    constructor (name, birthDate, project, manager) {
+    constructor (name, birthDate, project, manager, type) {
         this._name = name || 'John Doe';
         this._birthDate = birthDate || '01/01/1970';
         this._project = project || 'Buffer';
         this._manager = manager || 'Mayank';
+        this._type = type || 'SE';
     }
 
     set name (name) {
@@ -38,6 +39,14 @@ export class Employee {
 
     get manager () {
         return this._manager;
+    }
+
+    set type (type) {
+        this._type = type;
+    }
+
+    get type () {
+        return this._type;
     }
 
     get age () {
