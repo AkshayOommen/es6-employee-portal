@@ -1,7 +1,7 @@
 {
   "name": "es6-employee-portal",
   "version": "1.0.0",
-  "description": "An employee portal, what more do you want to know? It’s all here“,
+  "description": "An employee portal, what more do you want to know?",
   "main": "index.js",
   "repository": {
     "type": "git",
